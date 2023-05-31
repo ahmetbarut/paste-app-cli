@@ -1,0 +1,30 @@
+{
+    "name": "ahmetbarut/paste-cli",
+    "type": "project",
+    "require": {
+        "symfony/console": "^6.3",
+        "nunomaduro/termwind": "^1.15",
+        "guzzlehttp/guzzle": "^7.7"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "AhmetBarut\\PasteCli\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Ahmet Barut",
+            "email": "ahmetbarut588@gmail.com"
+        }
+    ],
+    "require-dev": {
+        "pestphp/pest": "^2.6",
+        "symfony/var-dumper": "^6.3"
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    }
+}
