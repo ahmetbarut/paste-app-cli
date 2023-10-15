@@ -15,6 +15,7 @@ use function Termwind\terminal;
 
 class StoreCommand extends Command
 {
+    public const API_URL = 'http://127.0.0.1:8000';
     protected function configure()
     {
         $this
@@ -92,9 +93,10 @@ class StoreCommand extends Command
                 'Content-Type' => 'application/json',
                 'X-App-Name' => 'paste-cli'
             ],
+            'base_uri' => self::API_URL,
         ]);
 
-        $response = $client->request('POST', 'http://127.0.0.1:8000/api/pastes', [
+        $response = $client->request('POST', '/api/pastes', [
             'json' => [
                 'content' => $content,
             ]
