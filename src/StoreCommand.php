@@ -15,7 +15,7 @@ use function Termwind\terminal;
 
 class StoreCommand extends Command
 {
-    public const API_URL = 'http://127.0.0.1:8000';
+    public const API_URL = 'https://paste.ahmetbarut.net';
     protected function configure()
     {
         $this
