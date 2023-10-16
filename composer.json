@@ -5,7 +5,8 @@
     "require": {
         "symfony/console": "^6.3",
         "nunomaduro/termwind": "^1.15",
-        "guzzlehttp/guzzle": "^7.7"
+        "guzzlehttp/guzzle": "^7.7",
+        "symfony/proccess": "^6.3"
     },
     "license": "MIT",
     "autoload": {
