@@ -99,7 +99,7 @@ class StoreCommand extends Command
             'base_uri' => self::API_URL,
         ]);
 
-        $response = $client->request('POST', '/api/pastes', [
+        $response = $client->request('POST', '/api/paste', [
             'json' => [
                 'code' => $content,
             ]
