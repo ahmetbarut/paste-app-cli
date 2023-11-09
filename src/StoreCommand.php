@@ -16,10 +16,11 @@ use function Termwind\terminal;
 class StoreCommand extends Command
 {
     public const API_URL = 'https://paste.ahmetbarut.net';
+
     protected function configure()
     {
         $this
-            ->setName('paste:create')
+            ->setName('create')
             ->setDescription('Create a new paste')
             ->addOption(
                 'file',
@@ -59,14 +60,16 @@ class StoreCommand extends Command
 
         $paste = $this->paste($content);
 
-        $process = new Process(['pbcopy'], null, null, $paste['url']);
+        $url = static::API_URL . '/' . $paste['hash'];
+        
+        $process = new Process(['pbcopy'], null, null, $url);
         $process->run();
 
         render('
             <div class="p-2 bg-green-500">
                 Successfully created a new paste! Paste url copied to clipboard.
                 or
-                <a href="' . $paste['url'] . '" class="text-blue-500 underline">' . $paste['url'] . '</a>
+                <a href="' . $url . '" class="text-blue-500 underline">' . $url . '</a>
             </div>
         ');
 
@@ -98,7 +101,7 @@ class StoreCommand extends Command
 
         $response = $client->request('POST', '/api/pastes', [
             'json' => [
-                'content' => $content,
+                'code' => $content,
             ]
         ]);
 
