@@ -18,6 +18,14 @@ paste-cli create "İçerik"
 paste-cli create "$(cat dosya.txt)"
 ```
 
+## Not
+Eğer komut çalışmıyorsa `~/.composer/vendor/bin` yolunu PATH değişkenine ekleyin.
+
+Örnek:
+```bash
+export PATH="$PATH:$HOME/.composer/vendor/bin"
+```
+
 ## Lisans
 
 [MIT](https://choosealicense.com/licenses/mit/)
