@@ -1,12 +1,18 @@
 {
     "name": "ahmetbarut/paste-cli",
     "type": "package",
-    "bin": "bin/paste",
+    "keywords": [
+        "paste",
+        "cli"
+    ],
+    "bin": [
+        "bin/paste-cli"
+    ],
     "require": {
         "symfony/console": "^6.3",
         "nunomaduro/termwind": "^1.15",
         "guzzlehttp/guzzle": "^7.7",
-        "symfony/proccess": "^6.3"
+        "symfony/process": "^6.3"
     },
     "license": "MIT",
     "autoload": {
