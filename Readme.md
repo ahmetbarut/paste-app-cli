@@ -28,4 +28,4 @@ export PATH="$PATH:$HOME/.composer/vendor/bin"
 
 ## Lisans
 
-[MIT](https://choosealicense.com/licenses/mit/)
+[MIT](LICENSE)
